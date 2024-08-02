@@ -1,0 +1,94 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+.logo{
+    width: max(40%,80px);
+    height: auto;
+}
+.logo h1{
+    font-size: 25px;
+    color: #E1251B;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    
+}
+.logo h3{
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+.profile-img{
+    color: rgb(84, 80, 80);
+    font-size: 30px;
+}
+.prof-image{
+    background-color: #e44e46;
+    border-radius: 50%;
+    padding: 2px;
+}
+.nav-profile{
+   
+    position: relative;
+}
+.nav-profile-dropdown{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1;
+}
+.nav-profile:hover .nav-profile-dropdown{
+    cursor: pointer;
+    display: flex;
+    list-style: none;
+    outline: 2px solid white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+   flex-direction: column;
+    gap: 10px;
+    color: #fff2ef;
+
+}
+.logout-icon{
+    color: #f44336;
+    font-size: 20px;
+    margin-left: 2px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+}
+.logout-text{
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 0px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0;
+    margin-bottom: 0;
+    padding-left: 1px;
+    padding-right: 5px;
+    
+    
+}
+.logout-text:hover{
+    color: #f44336;
+    transition: color 0.3s;
+    text-decoration: none;
+    
+}
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
