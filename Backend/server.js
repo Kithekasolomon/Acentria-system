@@ -5,6 +5,7 @@ import courseRouter from './routes/courseRoute.js';
 import studentRouter from './routes/studentRoute.js';
 import 'dotenv/config'
 import lecRouter from './routes/lecRoute.js';
+import examRouter from './routes/examRoute.js';
 
 
 const app = express();
@@ -22,6 +23,7 @@ app.use("/api/course", courseRouter)
 app.use("/images", express.static("uploads"))
 app.use("/api/student", studentRouter)
 app.use("/api/lec",lecRouter)
+app.use("/api/exam",examRouter)
 
 
 

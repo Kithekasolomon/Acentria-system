@@ -1,0 +1,147 @@
+.main-sec{
+    
+    width: 90%;
+
+}
+.exam-form{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #f4f0f0;
+    border: 1px solid #6d6d6d;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #6d6d6d;
+    height: 80vh;
+}
+.exam-form h3{
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    text-transform: uppercase;
+
+}
+.description{
+    display: flex;
+   gap: 25px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.title-area{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 80px;
+    gap: 5px;
+}
+.title-area label{
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+.title-area input{
+    padding: 10px;
+    width: 350px;
+    background-color: #e5dede;
+    border: none;
+    border-radius: 3px;
+    outline: 1px solid #aca6a6;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.subtitle-area{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 80px;
+    gap: 5px;
+}
+.subtitle-area label{
+    font-weight: bold;
+    font-size: 18px;    
+}
+.subtitle-area input{
+    padding: 10px;
+    width: 350px;
+    background-color: #e5dede;
+    border: none;
+    border-radius: 3px;
+    outline: 1px solid #aca6a6;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.text{
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+.select-file{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.select-file label{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 60px;
+}
+.section-2{
+    display: flex;
+    flex-direction: row;
+    
+}
+.section-2 input{
+    padding: 10px;
+    width: 350px;
+    background-color: #e5dede;
+    border: none;
+    border-radius: 3px;
+    outline: 1px solid #aca6a6;
+    font-size: 16px;
+    margin-left: 45px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.instructor{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    gap: 20px;
+}
+.instructor label{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 60px;
+}
+.instructor input{
+    padding: 10px;
+    width: 350px;
+    background-color: #e5dede;
+    border: none;
+    border-radius: 3px;
+    outline: 1px solid #aca6a6;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.upload-button{
+    padding: 10px 20px;
+    background-color: #E1251B;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 590px;
+    margin-top: 70px;
+}
+.upload-button:hover{
+    background-color: #D82220;
+}

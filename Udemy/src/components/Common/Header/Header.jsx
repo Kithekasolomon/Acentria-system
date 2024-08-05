@@ -1,24 +1,37 @@
-import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useContext, useEffect, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import Head from "./Head"
 import "./Header.css"
+import { IoIosLogOut, IoIosPerson } from "react-icons/io";
+import { StoreContext } from "../../context/StoreContext"
+import { IoIosMoon } from "react-icons/io";
+import { IoIosSearch } from "react-icons/io";
+import { LuSun } from "react-icons/lu";
 
-const Header = () => {
-    const [click, setClick] = useState(false)
-    const [sticky, setSticky] = useState(false);
+const Header = ({ setShowLogin }) => {
+  const navigate=useNavigate()
+  const {token,setToken}=useContext(StoreContext)
+  const [sticky, setSticky] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 50 ? setSticky(true) : setSticky(false);
     });
   }, []);
+  const logOut = () => {
+    setToken("");
+    localStorage.removeItem("token");
+    setShowLogin(false);
+    navigate("/")
+  }
+  
 
 
   return (
     <>
       <Head />
-      <header>
-        <nav className='flexSB'>
-          <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
+      <header className="header">
+        <nav className={`nav-bar ${sticky?'dark-nav':''}`}>
+          <ul className="nav-ul">
             <li>
               <Link to='/'>Home</Link>
             </li>
@@ -35,13 +48,26 @@ const Header = () => {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <div className='start'>
-            <div className='button'>NEED HELP?</div>
-          </div>
-          <button className='toggle' onClick={() => setClick(!click)}>
-            {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
-          </button>
+          {!token ? <button onClick={() => setShowLogin(true)} className="sign-in-button">Sign In</button> :
+            <div className="navbar-profile">
+            <IoIosPerson className="profile-img" />
+              <ul className="nav-profile-dropdown">
+                
+              <hr />
+              <li onClick={logOut}>
+                  <IoIosLogOut className="logout-icon" />
+                  <p onClick={() => setToken(null)}>Logout</p>
+                </li>
+                <hr />
+            </ul>
+          </div>}
+          
+          
+          
+            
+          
         </nav>
+        
       </header>
     </>
   )

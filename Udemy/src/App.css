@@ -47,7 +47,7 @@ body {
   max-width: 85%;
   margin: auto;
 }
-.flexSB {
+.flexSB{
   display: flex;
   justify-content: space-between;
 }

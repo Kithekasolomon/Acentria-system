@@ -10,6 +10,7 @@ const StoreContextProvider = (props) => {
     const [course_list,setCourseList] = useState([])
 
     const url = "http://localhost:4000"
+    const [token,setToken]=useState("")
     
     // Fetch course list on component mount
     const fetchCourseList = async () => {
@@ -28,10 +29,17 @@ const StoreContextProvider = (props) => {
         }
         loadData()
     }, [])
+    useEffect(() => { 
+        if (localStorage.getItem("token")) {
+            setToken(localStorage.getItem("token"));
+        }
+    })
     const contextValue = {
         // Define your store data here
         course_list,
-        url
+        url,
+        token,
+        setToken
         // Add other store data if needed
         
 

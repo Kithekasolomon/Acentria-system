@@ -11,7 +11,7 @@ const CourseDisplay = ({ category}) => {
           <h1>Course List</h1>
           <div className="course-display-list">
               {course_list.map((course, index) => {
-                  return <CourseItem key={index} id={course._id} instructor={course.instructor} title={course.title} description={ course.description} image={course.image} />
+                  return <CourseItem key={index} id={course._id} instructor={course.instructor} title={course.title} description={ course.description} image={course.image} duration={course.duration} />
               })}
           </div>
       </div>

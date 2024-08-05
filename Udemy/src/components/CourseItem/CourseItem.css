@@ -67,6 +67,22 @@
     font-weight: 500;
     color: white;
 }
+.duration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.instructor-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.instructor-name p{
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
 
 
 

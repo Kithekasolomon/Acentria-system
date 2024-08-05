@@ -1,8 +1,36 @@
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  background-color:rgba(255, 255, 255, 0.2) ;
+  z-index: 10;
+}
+.sign-in-button{
+  background-color: #E1251B;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 60px;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 50px;
+  letter-spacing: 2px;
+
+
+}
+.sign-in-button:hover{
+  background-color: #D3211B;
+}
+
+
 /*--------head------------*/
 .head {
     padding: 20px 0;
     color: #fff;
   }
+  
   .logo h1 {
     font-size: 29px;
     font-weight: 900;
@@ -15,41 +43,48 @@
   .head .icon {
     margin-left: 10px;
   }
+  .nav-ul{
+    display: flex;
+    
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 20px;
+  }
+  .dark-nav{
+    background-color: #b7cfcd;
+    color: #fff;
+    z-index: 10;
+    transition: 0.5s;
+  }
+ 
   /*--------head------------*/
   /*--------header------------*/
-  header {
-    background-color: rgba(255, 255, 255, 0.2);
+  .header {
+ 
     margin: 0 30px;
+    position: fixed;
+    justify-content: space-between;
+   
+    width: 90%;
+  }
+  
+  .header li {
+    margin-right: 40px;
     
   }
-  header .nav {
-    display: flex !important;
-  }
-  header li {
-    margin-right: 40px;
-  }
-  header ul {
+  .header ul {
     padding: 30px 20px;
   }
-  header ul li a {
+  .header ul li a {
     color: #fff;
     font-weight: 500;
     transition: 0.5s;
   }
-  header ul li a:hover {
+  .header ul li a:hover {
     color: #4d4f51;
   }
-  .start {
-    background-color: #4d4f51;
-    padding: 30px 70px;
-    color: #fff;
-    clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
-  }
-  .start:hover{
-    background-color: #E1251B;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-  }
+  
   .toggle {
     display: none;
   }
@@ -58,15 +93,11 @@
     .start {
       clip-path: none;
     }
-    header {
-      margin: 0;
-      background-color: #1eb2a6;
-      position: relative;
-    }
-    header ul.flexSB {
+    
+    .header ul.flexSB {
       display: none;
     }
-    header ul li {
+    .header ul li {
       margin-bottom: 20px;
     }
     .toggle {
@@ -83,7 +114,83 @@
       top: 7vh;
       left: 0;
       width: 100%;
-      background-color: #1eb2a6;
+      background-color: red;
     }
+  }
+  .navbar-profile{
+    position: relative;
+    background-color: #de4b46;
+    height: 55px;
+    width: 50px;
+    border-radius: 50%;
+    padding-left: 10px;
+    margin-right: 30px;
+    margin-top: 15px;
+
+  }
+  .nav-profile-dropdown{
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    right: 0;
+    background-color: #ced3d8;
+    padding: 10px;
+    display: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    margin-top: 9px;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    height: 70px;
+    list-style: none;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: #fff2ef;
+    border-radius: 4px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .logout-icon{
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+    font-size: 23px;
+  }
+  .logout-icon:hover{
+    color: #E1251B;
+    transition: 0.3s;
+  }
+  .profile-img{
+    font-size: 30px;
+    margin-top: 12px;
+    
+  }
+  .navbar-profile p{
+    margin-bottom: 0;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-weight: bold;
+    margin-right: 12px;
+    
+    
+  }
+  .navbar-profile p:hover{
+    color: #D3211B;
+    transition: 0.3s;
   }
   

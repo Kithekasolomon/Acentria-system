@@ -61,6 +61,8 @@ const Add = ({ url }) => {
     if (image) {
       formData.append("image", image);
     }
+    console.log(formData);
+    
     const response = await fetch(`${url}/api/course/add`, {
       method: "POST",
       body: formData,

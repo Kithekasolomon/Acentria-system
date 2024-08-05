@@ -120,3 +120,9 @@
 /*-------------online---------*/
 @media screen and (max-width: 768px) {
 }
+#courses{
+  margin-top: 150px;
+}
+.full-course-sec{
+  margin-top: 50px;
+}
